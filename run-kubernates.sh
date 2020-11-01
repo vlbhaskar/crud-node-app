@@ -6,4 +6,5 @@ kubectl create -f bhaskar_db_deployment.yml
 kubectl create -f bhaskar_db_service.yml
 kubectl create -f bhaskar_nodejs_deployment.yml
 kubectl create -f bhaskar_nodejs_service.yml
+#lanunh nodejs customer service
 curl $(minikube service bhaskar-nodejs-service --url)
