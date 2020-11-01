@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bhaskar-nodejs
+spec:
+  selector:
+    matchLabels:
+       app: bhaskar-nodejs
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bhaskar-nodejs
+    spec:
+      containers:
+      - image: bhaskar-nodejs:latest
+        imagePullPolicy: IfNotPresent
+        name: bhaskar-nodejs
+        ports:
+        - containerPort: 8081      

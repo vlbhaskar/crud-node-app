@@ -1,0 +1,25 @@
+version: "3"
+services:
+  bhaskar-db-service:
+    build:
+        context: ./db
+    ports:
+        - "1433:1433"
+    networks:
+        - my-network
+  web:
+    build:
+        context: .
+    ports:
+        - "8081:8081"
+    networks:
+        - my-network
+    restart: on-failure
+    depends_on:
+        - bhaskar-db-service
+    links: 
+        - bhaskar-db-service
+networks:
+  my-network:
+    driver: bridge
+  

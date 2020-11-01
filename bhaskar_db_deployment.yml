@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bhaskar-db
+spec:
+  selector:
+    matchLabels:
+       app: bhaskar-db
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: bhaskar-db
+    spec:
+      containers:
+      - image: bhaskar-db:latest
+        imagePullPolicy: IfNotPresent
+        name: bhaskar-db
+        ports:
+        - containerPort: 1433      
