@@ -1,0 +1,1 @@
+kubectl delete deployment,svc bhaskar-nodejs-service bhaskar-db bhaskar-nodejs bhaskar-db-service
