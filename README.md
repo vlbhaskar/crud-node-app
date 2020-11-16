@@ -1,6 +1,6 @@
 # crud-node-app
 
-1. Cassic way to deploy app with containers
+1. Classic way to deploy app with containers
 
       Deploy APP with containers: bash build-app.sh 
       
